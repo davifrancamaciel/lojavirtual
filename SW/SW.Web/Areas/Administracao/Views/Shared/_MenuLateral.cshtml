@@ -1,0 +1,21 @@
+﻿<div class="col-md-2 sidebar">
+    <div class="row">
+        <!-- uncomment code for absolute positioning tweek see top comment in css -->
+        <div class="absolute-wrapper"> </div>
+        <!-- Menu -->
+        <div class="side-menu">
+            <nav class="navbar navbar-default" role="navigation">
+                <!-- Main Menu -->
+                <div class="side-menu-container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="@Url.Action("Index", "Promocao").ToLower()"><i class="fa fa-list"></i>&nbsp;Promções</a></li>
+                        <li ><a href="@Url.Action("Index", "Produto").ToLower()"><i class="fa fa-list"></i>&nbsp;Produtos</a></li>
+                        <li><a href="@Url.Action("Index", "ProdutoPromocao").ToLower()"><i class="fa fa-list"></i>&nbsp;Relatorio Promções</a></li>
+
+                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@using PagedList
+@using PagedList.Mvc
+<div>
+    @Html.PagedListPager((IPagedList)Model, pagina => Url.Action(ViewBag.Action, new
+{
+    q = ViewBag.Query,
+    pagina = pagina,
+  
+}), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+</div>
