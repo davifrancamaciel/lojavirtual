@@ -1,0 +1,33 @@
+﻿@model PagedList.IPagedList<SW.Presentation.ServicoProduto.Produto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 text-center">
+            <h2>@item.Nome</h2>
+            <p>
+                @string.Format("{0:c}", @item.Preco)
+            </p>
+            @if (item.ProdutoPromocao.Ativa== true)
+            {
+                <p>@item.ProdutoPromocao.Promocao.Titulo</p>
+            }
+            <p><a class="btn btn-default" href="@Url.Action("AdicionarProduto", "Cesta", new { id = item.Id})">Comprar &raquo;</a></p>
+        </div>
+    }
+
+</div>
+<div class=" row">
+    <div class="text-center">
+        @Html.Partial("_Paginador")
+    </div>
+</div>
