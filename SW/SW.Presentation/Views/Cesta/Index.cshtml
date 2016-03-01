@@ -15,6 +15,7 @@
             <thead>
                 <tr>
                     <th>Produto</th>
+                    <th>Promoção</th>
                     <th>Preco</th>
                     <th>Quantidade</th>
                     <th>Total</th>
@@ -29,6 +30,7 @@
                     <tr>
 
                         <td> @item.Produto.Nome </td>
+                        <td> @item.Produto.ProdutoPromocao.Promocao.Titulo </td>
                         <td> @String.Format("{0:c}", item.Produto.Preco) </td>
                         <td> @item.Quantidade </td>
                         <td> @String.Format("{0:c}", item.ValorTotal) </td>

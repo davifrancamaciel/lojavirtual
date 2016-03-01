@@ -1,12 +1,8 @@
 ﻿using SW.Domain.Entity;
 using SW.Infra.Mappings;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SW.Infra.DataContexts
 {
@@ -49,7 +45,8 @@ namespace SW.Infra.DataContexts
             context.SaveChanges();
 
             context.Promocoes.Add(new Promocao { Id = 1, Titulo = "3 por 10 reais", Valor = 10, TipoDescontoId = 2, Quantidade = 3 });
-            context.Promocoes.Add(new Promocao { Id = 2, Titulo = "Pague 1 e Leve 2", Valor = 2, TipoDescontoId = 1, Quantidade = 2 });
+            context.Promocoes.Add(new Promocao { Id = 2, Titulo = "Pague 1 e Leve 2", Valor = 50, TipoDescontoId = 1, Quantidade = 2 });
+            context.Promocoes.Add(new Promocao { Id = 3, Titulo = "Pague 3 e Leve 5", Valor = 40, TipoDescontoId = 1, Quantidade = 5 });
 
             context.SaveChanges();
 
@@ -65,7 +62,7 @@ namespace SW.Infra.DataContexts
 
 
             context.ProdutosPromocoes.Add(new ProdutoPromocao { Id = 1, ProdutoId = 1, PromocaoId = 2, Ativa = true });
-            context.ProdutosPromocoes.Add(new ProdutoPromocao { Id = 2, ProdutoId = 2, PromocaoId = 1, Ativa = false });
+            context.ProdutosPromocoes.Add(new ProdutoPromocao { Id = 2, ProdutoId = 2, PromocaoId = 1, Ativa = true });
             context.SaveChanges();
 
             base.Seed(context);

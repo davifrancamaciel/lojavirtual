@@ -1,18 +1,12 @@
 ﻿using SW.Presentation.Helpers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace SW.Presentation.Models
 {
     public class CestaCompra
     {
-        ReferenciaServico referenciaServico;
-        public CestaCompra()
-        {
-            referenciaServico = new ReferenciaServico();
-        }
+
         public List<ItemCesta> Itens { get; set; }
 
         public double Total
@@ -55,21 +49,6 @@ namespace SW.Presentation.Models
         {
             Itens.RemoveAll(i => i.Produto.Id == Id);
         }
-        public void verificarPromo(int id)
-        {
-            var promo = referenciaServico.servicoProdutoPromocao.ListarPorId(id);
-            if (promo != null)
-            {
-                if (promo.Ativa && promo.Promocao.TipoDesconto.Desconto.Equals("Porcentagem"))
-                {
 
-                }
-                if (promo.Ativa && promo.Promocao.TipoDesconto.Desconto.Equals("Valor Final"))
-                {
-
-                }
-            }
-
-        }
     }
 }

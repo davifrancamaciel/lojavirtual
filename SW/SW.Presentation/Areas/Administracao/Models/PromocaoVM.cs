@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SW.Presentation.Areas.Administracao.Models
 {
@@ -14,16 +10,16 @@ namespace SW.Presentation.Areas.Administracao.Models
         [Display(Name = "Titulo:")]
         public string Titulo { get; set; }
 
-        [Required(ErrorMessage = "O campo Valor é obrigatório.")]
-        [Display(Name = "Valor:")]
+        [Required(ErrorMessage = "O campo Valor Tipo Desconto é obrigatório.")]
+        [Display(Name = "Valor Tipo Desconto:")]
         public double Valor { get; set; }
 
         [Required(ErrorMessage = "O campo Tipo Desconto é obrigatório.")]
         [Display(Name = "Tipo Desconto:")]
         public int TipoDescontoId { get; set; }
 
-        [Required(ErrorMessage = "O campo Quantidade é obrigatório.")]
-        [Display(Name = "Quantidade:")]
+        [Required(ErrorMessage = "O campo Quantidade limite é obrigatório.")]
+        [Display(Name = "Quantidade limite:")]
         public int Quantidade { get; set; }
     }
 }

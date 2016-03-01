@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Administracao/Views/Shared/_Layout.cshtml";
 }
@@ -30,73 +29,63 @@
             </div>
             @foreach (var item in Model)
             {
-                <div class="row margin-0">
+            <div class="row margin-0">
 
-                    <div class="col-md-3">
-                        <div class="cell">
-                            <div class="propertyname">
-                                @item.Titulo
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="cell">
-                            <div class="propertyname">
-                                @item.Valor
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="cell">
-                            <div class="propertyname">
-                                @item.TipoDesconto.Desconto
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="cell">
+                <div class="col-md-3">
+                    <div class="cell">
+                        <div class="propertyname">
+                            @item.Titulo
 
-                            <div class="propertyname">
-                       
-
-                                <a class="btn btn-default"
-                                   title="Editar"
-                                   href="@Url.Action("Editar", "Promocao", new { id = item.Id })">
-                                    <i class="fa fa-pencil"></i>
-                                </a>
-                                &nbsp;
-                                <a class="btn btn-danger lkbExcluir"
-                                   data-id="@item.Id"
-                                   data-nome="@item.Titulo"
-                                   data-controller="Promocao"
-                                   data-target="#myModalExcluir"
-                                   data-toggle="modal"
-                                   title="Excluir">
-
-                                    <i class="fa fa-trash-o"></i>
-                                </a>
-
-                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="cell">
+                        <div class="propertyname">
+                            @item.Valor
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="cell">
+                        <div class="propertyname">
+                            @item.TipoDesconto.Desconto
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cell">
+
+                        <div class="propertyname">
+
+
+                            <a class="btn btn-default"
+                               title="Editar"
+                               href="@Url.Action("Editar", "Promocao", new { id = item.Id })">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            &nbsp;
+                            <a class="btn btn-danger lkbExcluir"
+                               data-id="@item.Id"
+                               data-nome="@item.Titulo"
+                               data-controller="Promocao"
+                               data-target="#myModalExcluir"
+                               data-toggle="modal"
+                               title="Excluir">
+
+                                <i class="fa fa-trash-o"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
             }
 
         </div>
-        <div class="row margin-0 list-header hidden-sm hidden-xs">
-            <div class="col-md-12">
-                <div class="footer">
-                    @*Total de itens por pagina:<span style="color:red">@Model.Count</span>*@
-                </div>
-            </div>
-
-        </div>
-
-
     </div>
     <div class="panel-footer text-center">
-       
+
     </div>
 </div>
 @Html.Partial("_ModalExcluir")

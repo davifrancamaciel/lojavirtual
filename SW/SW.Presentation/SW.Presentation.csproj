@@ -128,7 +128,6 @@
     <Compile Include="Areas\Administracao\Models\ProdutoVM.cs" />
     <Compile Include="Areas\Administracao\Models\PromocaoVM.cs" />
     <Compile Include="Controllers\CestaController.cs" />
-    <Compile Include="Controllers\ChecoutController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -293,9 +292,7 @@
     </Content>
     <None Include="Service References\ServicoTipoDesconto\TipoDesconto.wsdl" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Checout\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

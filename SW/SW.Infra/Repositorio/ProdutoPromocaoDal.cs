@@ -1,11 +1,8 @@
 ﻿using SW.Domain.Entity;
 using SW.Infra.DataContexts;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SW.Infra.Repositorio
 {
@@ -38,6 +35,7 @@ namespace SW.Infra.Repositorio
                     var produtoPromocoes = contexto.ProdutosPromocoes
                     .Include(p => p.Promocao)
                     .Include(p => p.Produto)
+                    .Include(p=>p.Promocao.TipoDesconto)
                     .ToList();
                     return produtoPromocoes;
                 }

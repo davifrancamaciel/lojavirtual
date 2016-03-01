@@ -3,7 +3,6 @@ using SW.Infra.DataContexts;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
-using System;
 namespace SW.Infra.Repositorio
 {
     public static class ProdutoDal
@@ -64,6 +63,7 @@ namespace SW.Infra.Repositorio
                             produto.ProdutoPromocao.Ativa = promocao.Ativa;
                             produto.ProdutoPromocao.ProdutoId = promocao.ProdutoId;
                             produto.ProdutoPromocao.Promocao.Titulo = promocao.Promocao.Titulo;
+                            produto.ProdutoPromocao.Promocao.Quantidade = promocao.Promocao.Quantidade;
                         }
 
                         lista.Add(produto);

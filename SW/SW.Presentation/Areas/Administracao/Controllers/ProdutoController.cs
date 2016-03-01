@@ -1,12 +1,8 @@
 ﻿using SW.Presentation.Areas.Administracao.Models;
-using SW.Presentation.ServicoProduto;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using PagedList;
-using SW.Presentation.ServicoPromocao;
 
 using SW.Presentation.Helpers;
 
@@ -57,6 +53,7 @@ namespace SW.Presentation.Areas.Administracao.Controllers
 
             return View(new ProdutoVM());
         }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Cadastro(ProdutoVM model)
@@ -179,26 +176,6 @@ namespace SW.Presentation.Areas.Administracao.Controllers
             ViewBag.Promocao = referenciaServico.servicoPromocao.Listar();
         }
 
-        public void ProdutoPromocao(ProdutoPromocaoVM model)
-        {
-            if (model.Id > 0)
-            {
-
-                ServicoProdutoPromocao.ProdutoPromocao pp = new ServicoProdutoPromocao.ProdutoPromocao();
-
-                pp.Id = model.Id;
-                pp.PromocaoId = model.PromocaoId;
-                pp.ProdutoId = model.ProdutoId;
-
-                if (pp.Id > 0)
-                {
-                    referenciaServico.servicoProdutoPromocao.Atualizar(pp);
-                }
-                else
-                {
-                    referenciaServico.servicoProdutoPromocao.Cadastrar(pp);
-                }
-            }
-        }
+       
     }
 }

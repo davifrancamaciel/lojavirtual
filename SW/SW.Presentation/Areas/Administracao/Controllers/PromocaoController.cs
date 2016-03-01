@@ -2,9 +2,6 @@
 using SW.Presentation.Helpers;
 using SW.Presentation.ServicoPromocao;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace SW.Presentation.Areas.Administracao.Controllers
